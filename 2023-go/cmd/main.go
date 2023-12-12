@@ -5,6 +5,7 @@ import (
 	"adventofcode/day2"
 	"adventofcode/day3"
 	"adventofcode/day4"
+	"adventofcode/day5"
 	"os"
 	"strconv"
 )
@@ -36,6 +37,8 @@ func main() {
 		day3.Solve(chosenPart)
 	case 4:
 		day4.Solve(chosenPart)
+	case 5:
+		day5.Solve(chosenPart)
 	default:
 		panic("day not supported")
 	}
