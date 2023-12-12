@@ -3,6 +3,7 @@ package main
 import (
 	"adventofcode/day1"
 	"adventofcode/day2"
+	"adventofcode/day3"
 	"adventofcode/day4"
 	"os"
 	"strconv"
@@ -31,6 +32,8 @@ func main() {
 		day1.Solve(chosenPart)
 	case 2:
 		day2.Solve(chosenPart)
+	case 3:
+		day3.Solve(chosenPart)
 	case 4:
 		day4.Solve(chosenPart)
 	default:
