@@ -30,21 +30,22 @@ func solvePart1() {
 }
 
 func solvePart2() {
-	// almanach := parseFile()
-	// fmt.Printf("len(almanach.seeds): %v\n", len(almanach.seeds))
-	// // result := -1
+	almanach := parseFile()
+	result := -1
 
-	// min := 0
-	// for i, seed := range almanach.seeds {
-	// 	if i%2 == 0 {
-	// 		min = seed
-	// 		continue
-	// 	}
+	for i := 0; i < len(almanach.seeds); i += 2 {
+		min := almanach.seeds[i]
+		max := almanach.seeds[i+1]
 
-	// 	for j :=min;j<
-	// }
+		for j := min; j <= min+max; j++ {
+			location := almanach.getSeedLocation(j)
+			if result == -1 || location < result {
+				result = location
+			}
+		}
+	}
 
-	fmt.Println("Result of day 5 (part 2): ", 0)
+	fmt.Println("Result of day 5 (part 2): ", result)
 }
 
 func parseFile() Almanach {
